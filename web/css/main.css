@@ -1,0 +1,68 @@
+a {
+    color: orange;
+}
+
+body {
+    background-color: black;
+}
+
+#box {
+    position:absolute;
+    top: 70px;
+    width: 400px;
+    margin-left: -200px;
+    display:none;
+}
+
+#chars {
+    width: 85%;
+    margin-bottom:10px;
+}
+
+.col {
+    margin: 1px;
+}
+
+div.panel-heading {
+    padding-top:15px;
+    padding-bottom: 0px;
+}
+
+.form-control-feedback {
+    line-height:27px;
+}
+
+.form-control:focus {
+    border-color: orange;
+}
+
+.form-control-nav {
+    background-color:#F0FFFF;
+    border: lightgrey solid 1px;
+    border-radius:15px;
+}
+
+.landingPage {
+    position: relative;
+    left:50%
+    width:500px;
+    margin-left: 250px;
+    top: 160px;
+    color: orange;
+}
+
+.message {
+    line-height: 15px;
+    font-family: Verdana;
+    font-weight: bold;
+    text-space: 2px;
+    font-size: 14px;
+    color: orange;
+    margin: 15px;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: orange;
+}

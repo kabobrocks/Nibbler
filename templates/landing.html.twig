@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login - Nibbler</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-collapse navbar-collapse-1 collapse" aria-expanded="true">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="/account"><span class="glyphicon glyphicon-home"></span> Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-info">
+                        <div class="panel-body nibbles">
+                            <img class="img-responsive" alt="" src="{{ asset('img/nibbler.jpg') }}">
+                            Welcome to my Twitter clone, Nibbler! Here are instructions to get started:
+                            <ol>
+                                <li>
+                                    Create a database with the name "nibbler" and a user name "nibbler" and password "password". Give this user rights access to do things in the database.
+                                </li>
+                                <li>
+                                    Use sql file 'sql/nibbler.sql' to prepopulate the database with users and nibbles.
+                                </li>
+                                <li>
+                                    Once the database is ready, login and test. There are two Users provided with the SQL file:
+                                    <ul>
+                                        <li>
+                                            Username: <span style="font-weight: bold">ModernSonic</span> Password: <span style="font-weight: bold"> password</span>
+                                        </li>
+                                        <li>
+                                            Username: <span style="font-weight: bold">ManiaSonic</span> Password: <span style="font-weight: bold"> password</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Each account already has at least one Nibble made. Check out /all to see all Nibbles made from all Users
+                                </li>
+                            </ol>
+
+                            <form action="/login"  method="post">
+                                <div class="col">
+                                    <input id="signin-email" value="" name="username" autocomplete="username" placeholder="Username" type="text">
+                                </div>
+
+                                <div class="col">
+                                    <div>
+                                        <input id="signin-password" value="" name="password" placeholder="Password" autocomplete="current-password" type="password">
+                                    </div>
+                                    <br />
+                                    <button type="submit" class="btn btn-warning">
+                                        Log in
+                                    </button>
+                                </div>
+                            </form>
+                            {% if message %}
+                                <div class="message">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
